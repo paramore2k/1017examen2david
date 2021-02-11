@@ -89,19 +89,14 @@
         <div class="col-md-4 col-sm-12">
           <div class="contact">
             <h2>Me joindre</h2>
-            <p><i class="fa fa-map-marker"></i> 123 Chemin des Érables</p>
-            <p><i class="fa fa-phone"></i> 555-123-4567</p>
-            <p><i class="fa fa-envelope"></i> user@monsiteweb.com</p>
+            <Contact></Contact>
           </div>
         </div>
         <div class="col-md-8 col-sm-12">
           <div class="experience">
-            <h2 class="white">Expériences</h2>
+            <h3 class="white">Projets</h3>
             <div class="experience-content">
-              <h4 class="experience-title accent">Développement de site web</h4>
-              <h5>Compagnie Bidon Inc.</h5><span></span>
-              <h5>Juillet 2021 - Août 2024</h5>
-              <p class="education-description">Cras porta tincidunt sem, in sollicitudin lorem efficitur ut. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+              <Projet></Projet>
             </div>
           </div>
         </div>
@@ -112,8 +107,11 @@
 </template>
 
 <script>
+import Projet from "@/components/views/Projet";
+import Contact from "@/components/views/Contact";
 export default {
   name: "Profile",
+  components: {Contact, Projet},
   methods: {
   deconnection() {
     this.montrerProfile = false;
@@ -138,6 +136,7 @@ header {
 header img {
   display: inline-block !important;
 }
+
 
 .tm-title {
   color: #66CCFF;
