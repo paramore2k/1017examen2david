@@ -1,5 +1,9 @@
 <template>
-<div id="app">Je suis le header</div>
+<div id="app">
+  <nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">Header</span>
+  </nav>
+</div>
 </template>
 
 <script>
@@ -9,5 +13,7 @@ export default {
 </script>
 
 <style scoped>
-
+.navbar, .navbar-brand, .navbar-light{
+  margin-bottom: 40px;
+}
 </style>
