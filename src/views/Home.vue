@@ -1,7 +1,6 @@
 <template>
 <div id="app">
-<!-- Importation du header et du footer (top & bottom) -->
-  <Top></Top>
+
 <!-- Section du profile de la personne -->
   <Profile v-if="montrerProfile"></Profile>
 <!-- Si la personne n'est pas connectée  -->
@@ -10,15 +9,13 @@
       Aliquam asperiores delectus facere fuga harum iusto,
       maxime molestias mollitia nam neque non quam quibusdam quidem quod ratione tempora totam vel velit?</p>
   </div>
-<!-- Section du footer -->
-  <Bottom></Bottom>
+
 </div>
 </template>
 
 <script>
-import Top from "@/components/Top";
-import Bottom from "@/components/Bottom";
-import Profile from "@/components/views/Profile";
+
+import Profile from "@/views/Profile";
 
 export default {
 name: "home",
@@ -29,10 +26,10 @@ name: "home",
       montrerProfile: false,
     }
   },
-  components: {Profile, Bottom, Top},
+  components: {Profile},
   created() {
   /* Variables définissant une personne connectée ou non */
-    let loggedIn = true;
+    let loggedIn = false;
     if (loggedIn) {
       /* Si la personne est authentifier, montrer la page de son profil */
     this.montrerProfile = true;

@@ -5,7 +5,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center">
-          <img src="../../assets/user_icon.png" class="img-responsive img-circle" alt="Image profile utilisateur">
+          <img src="../assets/user_icon.png" class="img-responsive img-circle" alt="Image profile utilisateur">
           <h1 class="tm-title">Bienvenue</h1>
         </div>
       </div>
@@ -107,8 +107,8 @@
 </template>
 
 <script>
-import Projet from "@/components/views/Projet";
-import Contact from "@/components/views/Contact";
+import Projet from "@/views/Projet";
+import Contact from "@/views/Contact";
 export default {
   name: "Profile",
   components: {Contact, Projet},

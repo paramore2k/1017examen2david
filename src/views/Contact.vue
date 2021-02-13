@@ -1,6 +1,8 @@
 <template>
 <div>
-  <form v-on:submit.prevent>
+  <section class="container">
+    <div class="row">
+  <form v-on:submit.prevent class="col-6 m-auto text-left">
     <div class="form-group">
       <label for="nom">Nom: </label>
       <input type="text"  class="form-control" name="nom" id="nom">
@@ -19,12 +21,13 @@
     <div class="form-group">
       <label for="cateorie">Catégorie</label>
       <select name="categorie" id="cateorie" class="form-control">
-      <option v-for="categorie in categories" :key="categorie">{{ categorie.nom}}</option>
+      <option v-for="categorie in categories" :key="categorie.nom">{{ categorie.nom}}</option>
       </select>
     </div>
     <button type="button" class="btn btn-primary">Soumettre</button>
-
   </form>
+    </div>
+  </section>
 </div>
 </template>
 

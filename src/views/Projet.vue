@@ -25,11 +25,9 @@ export default {
 
 <style scoped>
 li{
-padding: 5px;
+  padding: 5px;
   margin: 2px;
-list-style-type: none;
-
-
+  list-style-type: none;
 }
 
 </style>

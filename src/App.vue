@@ -1,16 +1,21 @@
 <template>
 <div id="app">
-  <Home></Home>
+  <!-- Importation du header et du footer (top & bottom) -->
+  <Top></Top>
+  <!-- Section du footer -->
+  <Bottom></Bottom>
 </div>
 </template>
 
 <script>
 
-import Home from "@/components/views/Home";
+import Bottom from "@/components/Bottom";
+import Top from "@/components/Top";
 export default {
   name: 'App',
   components: {
-    Home
+    Top,
+    Bottom
   }
 }
 </script>
