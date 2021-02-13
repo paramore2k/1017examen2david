@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-md-12 text-center">
           <img src="../assets/user_icon.png" class="img-responsive img-circle" alt="Image profile utilisateur">
-          <h1 class="tm-title">Bienvenue</h1>
+          <h1 class="tm-title">{{ 'Bienvenue' | traduire(lang)}}</h1>
         </div>
       </div>
     </div>
@@ -20,17 +20,15 @@
         <div class="col-md-6 col-sm-12">
     <!--  À propos -->
           <div class="about">
-            <h2>À propos</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam doloribus dolorum ea enim,
-              ex id illo inventore iusto magnam maiores molestias neque quasi quibusdam quisquam quod,
-              sapiente unde ut veritatis?</p>
+            <h2>{{ 'About' | traduire(lang)}}</h2>
+            <p>{{ 'presentation1' | traduire(lang) }}</p>
           </div>
         </div>
 
     <!--   Compétences     -->
         <div class="col-md-6 col-sm-12">
           <div class="skills">
-            <h2 class="white">Compétences</h2>
+            <h2 class="white">{{ 'Compétences' | traduire(lang)}}</h2>
             <strong>PHP MySQL</strong>
             <span class="pull-right">70%</span>
             <div class="progress">
@@ -54,47 +52,19 @@
       </div>
     </section>
 
-    <!-- Section éducation et langues -->
-    <section class="container">
-      <div class="row">
-        <div class="col-md-8 col-sm-12">
-          <div class="education">
-            <h2 class="white">Éducation</h2>
-            <div class="education-content">
-              <h4 class="education-title accent">Intégration web</h4>
-              <div class="education-school">
-                <h5>Cégep de Trois-Rivières</h5><span></span>
-                <h5>Octobre 2019 - Juin 2021</h5>
-              </div>
-              <p class="education-description">In lacinia leo sed quam feugiat, ac efficitur dui tristique. Ut venenatis, odio quis cursus egestas, nulla sem volutpat diam, ac dapibus nisl ipsum ut ipsum. Nunc tincidunt libero non magna placerat elementum.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-12">
-          <div class="languages">
-            <h2>Langues</h2>
-            <ul>
-              <li>Français / French</li>
-              <li>English / Anglais</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Section contact et expérience -->
 
     <section class="container">
       <div class="row">
         <div class="col-md-4 col-sm-12">
           <div class="contact">
-            <h2>Me joindre</h2>
+            <h2>{{ 'Contact' | traduire(lang)}}</h2>
             <Contact></Contact>
           </div>
         </div>
         <div class="col-md-8 col-sm-12">
           <div class="experience">
-            <h3 class="white">Projets</h3>
+            <h3 class="white">{{ 'Projets' | traduire(lang)}}</h3>
             <div class="experience-content">
               <Projet></Projet>
             </div>
@@ -109,8 +79,11 @@
 <script>
 import Projet from "@/views/Projet";
 import Contact from "@/views/Contact";
+import { mixinTraductions} from "@/mixins/mixinTraductions";
+
 export default {
   name: "Profile",
+  mixins: [mixinTraductions],
   components: {Contact, Projet},
   methods: {
   deconnection() {

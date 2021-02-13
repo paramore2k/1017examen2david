@@ -1,14 +1,21 @@
 <template>
   <div id="app">
     <nav class="navbar navbar-light bg-light">
-      <span class="navbar-brand m-auto h1 text-center">Footer</span>
+<!--      <div class="text-center m-auto" v-maDirective></div>-->
     </nav>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Bottom"
+  name: "Bottom",
+/*  directives : {
+/!*  maDirective: {
+      bind: function (el) {
+      el.innerHTML = "Copyright ©" + new Date().getFullYear() + " - " + "David Champagne" + " - " + "tout droits réservés" + el.innerHTML;
+    }
+  }*!/
+  }*/
 }
 </script>
 

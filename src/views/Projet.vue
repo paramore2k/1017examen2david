@@ -2,21 +2,24 @@
 <div>
           <ul>
           <li v-for="(projet, i) in listeProjets" :key="i">
-            {{ projet.nom}}: {{ projet.description}}
+            <b>{{ projet.nom | traduire(lang)}}</b> <br/> {{ projet.description | traduire(lang)}}
           </li>
           </ul>
     </div>
 </template>
 
 <script>
+import { mixinTraductions} from "@/mixins/mixinTraductions";
+
 export default {
   name: "Projet",
+  mixins: [mixinTraductions],
   data() {
     return {
       listeProjets: [
-        { nom: "SpotiQuebec", description:" projet muiscal en REACT"},
-        { nom: "Clinique Vétérinaire",description: " cours de PHP"},
-        { nom: "CHVRCHES", description: "projet en Intégration Web"},
+        { nom: "SpotiQuebec", description: "project1"},
+        { nom: "clinique_veterinaire",description: "project2"},
+        { nom: "CHVRCHES", description: "project3"},
       ]
     }
   }

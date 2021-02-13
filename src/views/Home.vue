@@ -4,10 +4,8 @@
 <!-- Section du profile de la personne -->
   <Profile v-if="montrerProfile"></Profile>
 <!-- Si la personne n'est pas connectée  -->
-  <div v-else><h1>Bonjour</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Aliquam asperiores delectus facere fuga harum iusto,
-      maxime molestias mollitia nam neque non quam quibusdam quidem quod ratione tempora totam vel velit?</p>
+  <div v-else><h1>{{ 'Bonjour' | traduire(lang)}}</h1>
+    <p>{{ 'presentation1' | traduire(lang)}}</p>
   </div>
 
 </div>
@@ -16,9 +14,11 @@
 <script>
 
 import Profile from "@/views/Profile";
+import { mixinTraductions} from "@/mixins/mixinTraductions";
 
 export default {
 name: "home",
+mixins: [mixinTraductions],
   data() {
     return {
       /* Nom d'utilisateur à retourner par défaut */

@@ -4,7 +4,7 @@
     <span class="navbar-brand mb-0 h1">1017Examen2David</span>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item ml-3" v-for="menu in menuHeader" :key="menu.id">
-          <router-link :to="{path:menu.nom}" class="nav-link">{{menu.nom}}</router-link>
+          <router-link :to="{path:menu.nom}" class="nav-link">{{menu.nom | traduire(lang)}}</router-link>
         </li>
       </ul>
   </nav>
@@ -13,14 +13,17 @@
 </template>
 
 <script>
+import { mixinTraductions } from "@/mixins/mixinTraductions";
+
 export default {
   name: "Top",
+  mixins: [mixinTraductions],
   data() {
     return {
       menuHeader: [
-        { id:1, nom: 'Accueil'},
-        { id:2, nom: 'Projets'},
-        { id:3, nom: "Contact"},
+        { id:1, nom: 'home'},
+        { id:2, nom: 'projects'},
+        { id:3, nom: "contact"},
       ]
     }
   }
