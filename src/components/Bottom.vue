@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <nav class="navbar navbar-light bg-light">
-      <div class="text-center m-auto" v-maDirective></div>
+      <div class="text-center m-auto" v-maDirective> {{ nom }} -
+        <a href="https://github.com/paramore2k/1017examen2david/main/LICENSE" target="_blank">LICENSE</a></div>
     </nav>
   </div>
 </template>
@@ -9,10 +10,16 @@
 <script>
 export default {
   name: "Bottom",
+  data() {
+    return {
+      nom: "David Champagne"
+    }
+  },
   directives : {
   maDirective: {
       bind: function (el) {
-      el.innerHTML = "Copyright ©" + new Date().getFullYear() + " - " + "David Champagne" + " - " + "tout droits réservés" + el.innerHTML;
+      el.innerHTML = "Copyright ©" + new Date().getFullYear() + el.innerHTML;
+
     }
   }
   }
