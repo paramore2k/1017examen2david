@@ -2,7 +2,7 @@
   <div id="app">
     <nav class="navbar navbar-light bg-light">
       <div class="text-center m-auto" v-maDirective> {{ nom }} -
-        <a href="https://github.com/paramore2k/1017examen2david/main/LICENSE" target="_blank">LICENSE</a></div>
+        <a href="https://raw.githubusercontent.com/paramore2k/1017examen2david/main/LICENSE" target="_blank">LICENSE</a></div>
     </nav>
   </div>
 </template>
