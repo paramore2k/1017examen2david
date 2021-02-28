@@ -10,7 +10,7 @@
 <script>
 
 import Bottom from "@/components/Bottom";
-import Top from "@/views/Top";
+import Top from "@/components/Top";
 export default {
   name: 'App',
   components: {

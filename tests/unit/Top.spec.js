@@ -1,13 +1,13 @@
 import {mount} from "@vue/test-utils"
-import Top from './../../views/Top.vue'
+import Top from '@/components/Top.vue'
 
 describe("Test unitaire pour le header du site web", () => {
 
-    test('Top est-til une instance de Vue ?', () => {
+    test('Top', () => {
 
-        const wrapper = mount( {
+        const wrapper = mount(Top, {
             Data: {
-                Top:{
+                menuHeader:{
                     name: "Top"
                 }
             }
