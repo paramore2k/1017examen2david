@@ -8,3 +8,5 @@
 6. On tappe git push origin HEAD:main --force ce qui poussera notre répertoire dist sur notre branche github pages.
 
 Site accessible via https://github.com/paramore2k/paramore2k.github.io
+
+Raison du choix: Github pages est tout simplement l'idéal et le plus simple pour publier une page. 
